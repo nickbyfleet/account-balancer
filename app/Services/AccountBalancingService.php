@@ -27,8 +27,8 @@ class AccountBalancingService
                 if ($amountRemaining >= $overflow) {
                     // We're going to completely use this overflow account
                     $movements[] = [
-                        "from_account_id" => $overflowAccountId,
-                        "to_account_id" => $accountId,
+                        "from_account_id" => $accountId,
+                        "to_account_id" => $overflowAccountId,
                         "amount" => $overflow
                     ];
 
@@ -42,8 +42,8 @@ class AccountBalancingService
                  * the remaining balance in the overflow account.
                  */
                 $movements[] = [
-                    "from_account_id" => $overflowAccountId,
-                    "to_account_id" => $accountId,
+                    "from_account_id" => $accountId,
+                    "to_account_id" => $overflowAccountId,
                     "amount" => $amountRemaining
                 ];
 
